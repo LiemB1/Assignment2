@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ocean Game</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="container">
+    <canvas id="game" width="800" height="500"></canvas>
+    <p id="score">Score: 0</p>
+    <p id="time">Time: 0s</p>
+    <button id="start">Start New Game</button>
+    <button id="collect" disabled>Collect</button>
+    <div id="gameOver">
+      <h2>Game Over!</h2>
+      <p id="finalScore">Final Score: 0</p>
+      <p>Click "Start New Game" to play again</p>
+    </div>
+    <h1 id="instructions">GAME INSTRUCTIONS: <br><span id="text">You will need to start the game, and it will ask you which mode you would like to enter (30 seconds) or (60 seconds). Enter 30 or 60 to start the game according to the duration you typed. Litters will start spawning from the right, your job is to collect this litters either by pressing the "COLLECT" button or pressing the "Space" key on your keyboard. If you are close enough to the litter, you will be able to collect it and earn 1 score for each litter you collect within the time limit. You can move your character by pressing the "left", "right", "up", "down" key. Enjoy the game!</span></h1>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

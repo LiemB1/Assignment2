@@ -1,0 +1,307 @@
+<!--Data for Tere boat-->
+<Boat>
+<Tere>
+	<!--Left side of Tere boat-->
+	<left>
+		<!--Row 1-->
+		<row>
+			<column id="TLR1C1">false</column>
+			<column id="TLR1C2">false</column>
+			<column id="TLR1C3">false</column>
+		</row>
+		<!--Row 2-->
+		<row>
+			<column id="TLR2C1">false</column>
+			<column id="TLR2C2">false</column>
+			<column id="TLR2C3">false</column>
+		</row>
+		<!--Row 3-->
+		<row>
+			<column id="TLR3C1">true</column>
+			<column id="TLR3C2">true</column>
+			<column id="TLR3C3">true</column>
+			<column id="TLR3C4">false</column>
+		</row>
+		<!--Row 4-->
+		<row>
+			<column id="TLR4C1">false</column>
+			<column id="TLR4C2">false</column>
+			<column id="TLR4C3">false</column>
+			<column id="TLR4C4">false</column>
+		</row>
+		<!--Row 5-->
+		<row>
+			<column id="TLR5C1">true</column>
+			<column id="TLR5C2">true</column>
+			<column id="TLR5C3">false</column>
+			<column id="TLR5C4">false</column>
+		</row>
+		<!--Row 6-->
+		<row>
+			<column id="TLR6C1">false</column>
+			<column id="TLR6C2">false</column>
+			<column id="TLR6C3">false</column>
+			<column id="TLR6C4">false</column>
+		</row>
+		<!--Row 7-->
+		<row>
+			<column id="TLR7C1">false</column>
+			<column id="TLR7C2">true</column>
+			<column id="TLR7C3">false</column>
+			<column id="TLR7C4">false</column>
+		</row>
+		<!--Row 8-->
+		<row>
+			<column id="TLR8C1">false</column>
+			<column id="TLR8C2">false</column>
+			<column id="TLR8C3">false</column>
+			<column id="TLR8C4">false</column>
+		</row>
+		<!--Row 9-->
+		<row>
+			<column id="TLR9C1">false</column>
+			<column id="TLR9C2">false</column>
+			<column id="TLR9C3">false</column>
+		</row>
+	</left>
+	<!--Right side of Tere boat-->
+	<right>
+		<!--Row 1-->
+		<row>
+			<column id="TRR1C1">false</column>
+			<column id="TRR1C2">false</column>
+			<column id="TRR1C3">false</column>
+		</row>
+		<!--Row 2-->
+		<row>
+			<column id="TRR2C1">true</column>
+			<column id="TRR2C2">false</column>
+			<column id="TRR2C3">false</column>
+		</row>
+		<!--Row 3-->
+		<row>
+			<column id="TRR3C1">false</column>
+			<column id="TRR3C2">false</column>
+			<column id="TRR3C3">false</column>
+			<column id="TRR3C4">false</column>
+		</row>
+		<!--Row 4-->
+		<row>
+			<column id="TRR4C1">true</column>
+			<column id="TRR4C2">true</column>
+			<column id="TRR4C3">true</column>
+			<column id="TRR4C4">false</column>
+		</row>
+		<!--Row 5-->
+		<row>
+			<column id="TRR5C1">false</column>
+			<column id="TRR5C2">false</column>
+			<column id="TRR5C3">false</column>
+			<column id="TRR5C4">false</column>
+		</row>
+		<!--Row 6-->
+		<row>
+			<column id="TRR6C1">false</column>
+			<column id="TRR6C2">false</column>
+			<column id="TRR6C3">false</column>
+			<column id="TRR6C4">false</column>
+		</row>
+		<!--Row 7-->
+		<row>
+			<column id="TRR7C1">false</column>
+			<column id="TRR7C2">true</column>
+			<column id="TRR7C3">true</column>
+			<column id="TRR7C4">true</column>
+		</row>
+		<!--Row 8-->
+		<row>
+			<column id="TRR8C1">false</column>
+			<column id="TRR8C2">false</column>
+			<column id="TRR8C3">false</column>
+			<column id="TRR8C4">false</column>
+		</row>
+		<!--Row 9-->
+		<row>
+			<column id="TRR9C1">false</column>
+			<column id="TRR9C2">false</column>
+			<column id="TRR9C3">false</column>
+		</row>
+	</right>
+</Tere>
+
+<!--Data for Nui boat-->
+<Nui>
+	<!--Left side of Nui boat-->
+	<left>
+		<!--Row 1-->
+		<row>
+			<column id="NLR1C1">false</column>
+			<column id="NLR1C2">false</column>
+		</row>
+		<!--Row 2-->
+		<row>
+			<column id="NLR2C1">false</column>
+			<column id="NLR2C2">false</column>
+		</row>
+		<!--Row 3-->
+		<row>
+			<column id="NLR3C1">false</column>
+			<column id="NLR3C2">false</column>
+			<column id="NLR3C3">false</column>
+		</row>
+		<!--Row 4-->
+		<row>
+			<column id="NLR4C1">true</column>
+			<column id="NLR4C2">true</column>
+			<column id="NLR4C3">true</column>
+		</row>
+		<!--Row 5-->
+		<row>
+			<column id="NLR5C1">false</column>
+			<column id="NLR5C2">false</column>
+			<column id="NLR5C3">false</column>
+			<column id="NLR5C4">false</column>
+		</row>
+		<!--Row 6-->
+		<row>
+			<column id="NLR6C1">true</column>
+			<column id="NLR6C2">false</column>
+			<column id="NLR6C3">true</column>
+			<column id="NLR6C4">true</column>
+		</row>
+		<!--Row 7-->
+		<row>
+			<column id="NLR7C1">true</column>
+			<column id="NLR7C2">false</column>
+			<column id="NLR7C3">false</column>
+			<column id="NLR7C4">false</column>
+		</row>
+		<!--Row 8-->
+		<row>
+			<column id="NLR8C1">true</column>
+			<column id="NLR8C2">false</column>
+			<column id="NLR8C3">false</column>
+			<column id="NLR8C4">false</column>
+		</row>
+		<!--Row 9-->
+		<row>
+			<column id="NLR9C1">false</column>
+			<column id="NLR9C2">false</column>
+			<column id="NLR9C3">false</column>
+			<column id="NLR9C4">false</column>
+		</row>
+		<!--Row 10-->
+		<row>
+			<column id="NLR10C1">true</column>
+			<column id="NLR10C2">true</column>
+			<column id="NLR10C3">false</column>
+			<column id="NLR10C4">false</column>
+		</row>
+		<!--Row 11-->
+		<row>
+			<column id="NLR11C1">false</column>
+			<column id="NLR11C2">false</column>
+			<column id="NLR11C3">false</column>
+			<column id="NLR11C4">false</column>
+		</row>
+		<!--Row 12-->
+		<row>
+			<column id="NLR12C1">false</column>
+			<column id="NLR12C2">false</column>
+			<column id="NLR12C3">false</column>
+		</row>
+		<!--Row 13-->
+		<row>
+			<column id="NLR13C1">false</column>
+			<column id="NLR13C2">false</column>
+			<column id="NLR13C3">false</column>
+		</row>
+	</left>
+	<!--Right side of Nui boat-->
+	<right>
+		<!--Row 1-->
+		<row>
+			<column id="NRR1C1">false</column>
+			<column id="NRR2C2">false</column>
+		</row>
+		<!--Row 2-->
+		<row>
+			<column id="NRR2C1">false</column>
+			<column id="NRR2C2">false</column>
+		</row>
+		<!--Row 3-->
+		<row>
+			<column id="NRR3C1">false</column>
+			<column id="NRR3C2">false</column>
+			<column id="NRR3C3">false</column>
+		</row>
+		<!--Row 4-->
+		<row>
+			<column id="NRR4C1">false</column>
+			<column id="NRR4C2">false</column>
+			<column id="NRR4C3">true</column>
+		</row>
+		<!--Row 5-->
+		<row>
+			<column id="NRR5C1">false</column>
+			<column id="NRR5C2">false</column>
+			<column id="NRR5C3">true</column>
+			<column id="NRR5C4">false</column>
+		</row>
+		<!--Row 6-->
+		<row>
+			<column id="NRR6C1">false</column>
+			<column id="NRR6C2">false</column>
+			<column id="NRR6C3">true</column>
+			<column id="NRR6C4">false</column>
+		</row>
+		<!--Row 7-->
+		<row>
+			<column id="NRR7C1">true</column>
+			<column id="NRR7C2">true</column>
+			<column id="NRR7C3">true</column>
+			<column id="NRR7C4">true</column>
+		</row>
+		<!--Row 8-->
+		<row>
+			<column id="NRR8C1">false</column>
+			<column id="NRR8C2">false</column>
+			<column id="NRR8C3">false</column>
+			<column id="NRR8C4">false</column>
+		</row>
+		<!--Row 9-->
+		<row>
+			<column id="NRR9C1">false</column>
+			<column id="NRR9C2">false</column>
+			<column id="NRR9C3">false</column>
+			<column id="NRR9C4">false</column>
+		</row>
+		<!--Row 10-->
+		<row>
+			<column id="NRR10C1">false</column>
+			<column id="NRR10C2">false</column>
+			<column id="NRR10C3">false</column>
+			<column id="NRR10C4">false</column>
+		</row>
+		<!--Row 11-->
+		<row>
+			<column id="NRR11C1">false</column>
+			<column id="NRR11C2">false</column>
+			<column id="NRR11C3">false</column>
+			<column id="NRR11C4">false</column>
+		</row>
+		<!--Row 12-->
+		<row>
+			<column id="NRR12C1">false</column>
+			<column id="NRR12C2">false</column>
+			<column id="NRR12C3">false</column>
+		</row>
+		<!--Row 13-->
+		<row>
+			<column id="NRR13C1">false</column>
+			<column id="NRR13C2">false</column>
+			<column id="NRR13C3">false</column>
+		</row>
+	</right>
+</Nui>
+</Boat>

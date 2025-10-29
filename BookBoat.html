@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <style>
+    .grid-container {
+      display: grid;
+      grid-template-columns: auto auto auto auto;
+      grid-template-rows: 20px 20px 20px 20px 20px 20px 20px 20px 20px;
+      background-color: #2196F3;
+      padding: 10px;
+    }
+
+    .grid-container.Nui {
+      grid-template-rows: 20px 20px 20px 20px 20px 20px 20px 20px 20px 20px 20px 20px 20px;
+    }
+
+    .grid-item {
+      display: flex;
+      background-color: rgba(255, 255, 255, 0.8);
+    }
+
+    .base-template {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      grid: gap 2px;
+    }
+
+    .block {
+      height: 100%;
+      width: 100%;
+
+      background-color: aquamarine;
+      cursor: pointer;
+      transition: background-color 0.3 ease;
+
+      &:hover {
+        background-color: #2196F3;
+      }
+    }
+  </style>
+
+</head>
+
+<body onload="httpRequest()">
+  <div class="base-template">
+
+    <div class="grid-container Tere Left">
+      <div class="grid-item"></div>
+      <div class="grid-item"><button id="TLR1C1" type="button" class="block" title="seat unoccupied"></button></div>
+      <div class="grid-item"><button id="TLR1C2" type="button" class="block" title="seat unoccupied"></button></div>
+      <div class="grid-item"><button id="TLR1C3" type="button" class="block" title="seat unoccupied"></button></div>
+      <div class="grid-item"></div>
+      <div class="grid-item"><button id="TLR2C1" type="button" class="block" title="seat unoccupied"></button></div>
+      <div class="grid-item"><button id="TLR2C2" type="button" class="block" title="seat unoccupied"></button></div>
+      <div class="grid-item"><button id="TLR2C3" type="button" class="block" title="seat unoccupied"></button></div>
+
+      <div class="grid-item"><button id="TLR3C1" type="button" class="block" title="seat unoccupied"></button></div>
+      <div class="grid-item"><button id="TLR3C2" type="button" class="block" title="seat unoccupied"></button></div>
+      <div class="grid-item"><button id="TLR3C3" type="button" class="block" title="seat unoccupied"></button></div>
+      <div class="grid-item"><button id="TLR3C4" type="button" class="block" title="seat unoccupied"></button></div>
+
+      <div class="grid-item"><button id="TLR4C1" type="button" class="block" title="seat unoccupied"></button></div>
+      <div class="grid-item"><button id="TLR4C2" type="button" class="block" title="seat unoccupied"></button></div>
+      <div class="grid-item"><button id="TLR4C3" type="button" class="block" title="seat unoccupied"></button></div>
+      <div class="grid-item"><button id="TLR4C4" type="button" class="block" title="seat unoccupied"></button></div>
+
+      <div class="grid-item"><button id="TLR5C1" type="button" class="block" title="seat unoccupied"></button></div>
+      <div class="grid-item"><button id="TLR5C2" type="button" class="block" title="seat unoccupied"></button></div>
+      <div class="grid-item"><button id="TLR5C3" type="button" class="block" title="seat unoccupied"></button></div>
+      <div class="grid-item"><button id="TLR5C4" type="button" class="block" title="seat unoccupied"></button></div>
+
+      <div class="grid-item"><button id="TLR6C1" type="button" class="block" title="seat unoccupied"></button></div>
+      <div class="grid-item"><button id="TLR6C2" type="button" class="block" title="seat unoccupied"></button></div>
+      <div class="grid-item"><button id="TLR6C3" type="button" class="block" title="seat unoccupied"></button></div>
+      <div class="grid-item"><button id="TLR6C4" type="button" class="block" title="seat unoccupied"></button></div>
+
+      <div class="grid-item"><button id="TLR7C1" type="button" class="block" title="seat unoccupied"></button></div>
+      <div class="grid-item"><button id="TLR7C2" type="button" class="block" title="seat unoccupied"></button></div>
+      <div class="grid-item"><button id="TLR7C3" type="button" class="block" title="seat unoccupied"></button></div>
+      <div class="grid-item"><button id="TLR7C4" type="button" class="block" title="seat unoccupied"></button></div>
+
+      <div class="grid-item"><button id="TLR8C1" type="button" class="block" title="seat unoccupied"></button></div>
+      <div class="grid-item"><button id="TLR8C2" type="button" class="block" title="seat unoccupied"></button></div>
+      <div class="grid-item"><button id="TLR8C3" type="button" class="block" title="seat unoccupied"></button></div>
+      <div class="grid-item"><button id="TLR8C4" type="button" class="block" title="seat unoccupied"></button></div>
+      <div class="grid-item"></div>
+      <div class="grid-item"><button id="TLR9C1" type="button" class="block" title="seat unoccupied"></button></div>
+      <div class="grid-item"><button id="TLR9C2" type="button" class="block" title="seat unoccupied"></button></div>
+      <div class="grid-item"><button id="TLR9C3" type="button" class="block" title="seat unoccupied"></button></div>
+    </div>
+    <div class="grid-container Tere Right">
+      <div class="grid-item"><button id="TRR1C1" type="button" class="block" title="seat unoccupied"></button></div>
+      <div class="grid-item"><button id="TRR1C2" type="button" class="block" title="seat unoccupied"></button></div>
+      <div class="grid-item"><button id="TRR1C3" type="button" class="block" title="seat unoccupied"></button></div>
+      <div class="grid-item"></div>
+      <div class="grid-item"><button id="TRR2C1" type="button" class="block" title="seat unoccupied"></button></div>
+      <div class="grid-item"><button id="TRR2C2" type="button" class="block" title="seat unoccupied"></button></div>
+      <div class="grid-item"><button id="TRR2C3" type="button" class="block" title="seat unoccupied"></button></div>
+      <div class="grid-item"></div>
+      <div class="grid-item"><button id="TRR3C1" type="button" class="block" title="seat unoccupied"></button></div>
+      <div class="grid-item"><button id="TRR3C2" type="button" class="block" title="seat unoccupied"></button></div>
+      <div class="grid-item"><button id="TRR3C3" type="button" class="block" title="seat unoccupied"></button></div>
+      <div class="grid-item"><button id="TRR3C4" type="button" class="block" title="seat unoccupied"></button></div>
+
+      <div class="grid-item"><button id="TRR4C1" type="button" class="block" title="seat unoccupied"></button></div>
+      <div class="grid-item"><button id="TRR4C2" type="button" class="block" title="seat unoccupied"></button></div>
+      <div class="grid-item"><button id="TRR4C3" type="button" class="block" title="seat unoccupied"></button></div>
+      <div class="grid-item"><button id="TRR4C4" type="button" class="block" title="seat unoccupied"></button></div>
+
+      <div class="grid-item"><button id="TRR5C1" type="button" class="block" title="seat unoccupied"></button></div>
+      <div class="grid-item"><button id="TRR5C2" type="button" class="block" title="seat unoccupied"></button></div>
+      <div class="grid-item"><button id="TRR5C3" type="button" class="block" title="seat unoccupied"></button></div>
+      <div class="grid-item"><button id="TRR5C5" type="button" class="block" title="seat unoccupied"></button></div>
+
+      <div class="grid-item"><button id="TRR6C1" type="button" class="block" title="seat unoccupied"></button></div>
+      <div class="grid-item"><button id="TRR6C2" type="button" class="block" title="seat unoccupied"></button></div>
+      <div class="grid-item"><button id="TRR6C3" type="button" class="block" title="seat unoccupied"></button></div>
+      <div class="grid-item"><button id="TRR6C4" type="button" class="block" title="seat unoccupied"></button></div>
+
+      <div class="grid-item"><button id="TRR7C1" type="button" class="block" title="seat unoccupied"></button></div>
+      <div class="grid-item"><button id="TRR7C2" type="button" class="block" title="seat unoccupied"></button></div>
+      <div class="grid-item"><button id="TRR7C3" type="button" class="block" title="seat unoccupied"></button></div>
+      <div class="grid-item"><button id="TRR7C4" type="button" class="block" title="seat unoccupied"></button></div>
+
+      <div class="grid-item"><button id="TRR8C1" type="button" class="block" title="seat unoccupied"></button></div>
+      <div class="grid-item"><button id="TRR8C2" type="button" class="block" title="seat unoccupied"></button></div>
+      <div class="grid-item"><button id="TRR8C3" type="button" class="block" title="seat unoccupied"></button></div>
+      <div class="grid-item"><button id="TRR8C4" type="button" class="block" title="seat unoccupied"></button></div>
+
+      <div class="grid-item"><button id="TRR9C1" type="button" class="block" title="seat unoccupied"></button></div>
+      <div class="grid-item"><button id="TRR9C2" type="button" class="block" title="seat unoccupied"></button></div>
+      <div class="grid-item"><button id="TRR9C3" type="button" class="block" title="seat unoccupied"></button></div>
+      <div class="grid-item"></div>
+
+    </div>
+
+
+    <div class="grid-container Nui Left">
+      <div class="grid-item"></div>
+      <div class="grid-item"></div>
+      <div class="grid-item"><button id="NLR1C1" type="button" class="block" title="seat unoccupied"></button></div>
+      <div class="grid-item"><button id="NLR1C2" type="button" class="block" title="seat unoccupied"></button></div>
+      <div class="grid-item"></div>
+      <div class="grid-item"></div>
+      <div class="grid-item"><button id="NLR2C1" type="button" class="block" title="seat unoccupied"></button></div>
+      <div class="grid-item"><button id="NLR2C2" type="button" class="block" title="seat unoccupied"></button></div>
+      <div class="grid-item"></div>
+      <div class="grid-item"><button id="NLR3C1" type="button" class="block" title="seat unoccupied"></button></div>
+      <div class="grid-item"><button id="NLR3C2" type="button" class="block" title="seat unoccupied"></button></div>
+      <div class="grid-item"><button id="NLR3C3" type="button" class="block" title="seat unoccupied"></button></div>
+      <div class="grid-item"></div>
+      <div class="grid-item"><button id="NLR4C1" type="button" class="block" title="seat unoccupied"></button></div>
+      <div class="grid-item"><button id="NLR4C2" type="button" class="block" title="seat unoccupied"></button></div>
+      <div class="grid-item"><button id="NLR4C3" type="button" class="block" title="seat unoccupied"></button></div>
+
+      <div class="grid-item"><button id="NLR5C1" type="button" class="block" title="seat unoccupied"></button></div>
+      <div class="grid-item"><button id="NLR5C2" type="button" class="block" title="seat unoccupied"></button></div>
+      <div class="grid-item"><button id="NLR5C3" type="button" class="block" title="seat unoccupied"></button></div>
+      <div class="grid-item"><button id="NLR5C4" type="button" class="block" title="seat unoccupied"></button></div>
+
+      <div class="grid-item"><button id="NLR6C1" type="button" class="block" title="seat unoccupied"></button></div>
+      <div class="grid-item"><button id="NLR6C2" type="button" class="block" title="seat unoccupied"></button></div>
+      <div class="grid-item"><button id="NLR6C3" type="button" class="block" title="seat unoccupied"></button></div>
+      <div class="grid-item"><button id="NLR6C4" type="button" class="block" title="seat unoccupied"></button></div>
+
+      <div class="grid-item"><button id="NLR7C1" type="button" class="block" title="seat unoccupied"></button></div>
+      <div class="grid-item"><button id="NLR7C2" type="button" class="block" title="seat unoccupied"></button></div>
+      <div class="grid-item"><button id="NLR7C3" type="button" class="block" title="seat unoccupied"></button></div>
+      <div class="grid-item"><button id="NLR7C4" type="button" class="block" title="seat unoccupied"></button></div>
+
+      <div class="grid-item"><button id="NLR8C1" type="button" class="block" title="seat unoccupied"></button></div>
+      <div class="grid-item"><button id="NLR8C2" type="button" class="block" title="seat unoccupied"></button></div>
+      <div class="grid-item"><button id="NLR8C3" type="button" class="block" title="seat unoccupied"></button></div>
+      <div class="grid-item"><button id="NLR8C4" type="button" class="block" title="seat unoccupied"></button></div>
+
+      <div class="grid-item"><button id="NLR9C1" type="button" class="block" title="seat unoccupied"></button></div>
+      <div class="grid-item"><button id="NLR9C2" type="button" class="block" title="seat unoccupied"></button></div>
+      <div class="grid-item"><button id="NLR9C3" type="button" class="block" title="seat unoccupied"></button></div>
+      <div class="grid-item"><button id="NLR9C4" type="button" class="block" title="seat unoccupied"></button></div>
+
+      <div class="grid-item"><button id="NLR10C1" type="button" class="block" title="seat unoccupied"></button></div>
+      <div class="grid-item"><button id="NLR10C2" type="button" class="block" title="seat unoccupied"></button></div>
+      <div class="grid-item"><button id="NLR10C3" type="button" class="block" title="seat unoccupied"></button></div>
+      <div class="grid-item"><button id="NLR10C4" type="button" class="block" title="seat unoccupied"></button></div>
+
+      <div class="grid-item"><button id="NLR11C1" type="button" class="block" title="seat unoccupied"></button></div>
+      <div class="grid-item"><button id="NLR11C2" type="button" class="block" title="seat unoccupied"></button></div>
+      <div class="grid-item"><button id="NLR11C3" type="button" class="block" title="seat unoccupied"></button></div>
+      <div class="grid-item"><button id="NLR11C4" type="button" class="block" title="seat unoccupied"></button></div>
+
+      <div class="grid-item"></div>
+      <div class="grid-item"><button id="NLR12C1" type="button" class="block" title="seat unoccupied"></button></div>
+      <div class="grid-item"><button id="NLR12C2" type="button" class="block" title="seat unoccupied"></button></div>
+      <div class="grid-item"><button id="NLR12C3" type="button" class="block" title="seat unoccupied"></button></div>
+
+      <div class="grid-item"></div>
+      <div class="grid-item"><button id="NLR13C1" type="button" class="block" title="seat unoccupied"></button></div>
+      <div class="grid-item"><button id="NLR13C2" type="button" class="block" title="seat unoccupied"></button></div>
+      <div class="grid-item"><button id="NLR13C3" type="button" class="block" title="seat unoccupied"></button></div>
+    </div>
+
+    <div class="grid-container Nui Right">
+      <div class="grid-item"><button id="NRR1C1" type="button" class="block" title="seat unoccupied"></button></div>
+      <div class="grid-item"><button id="NRR1C2" type="button" class="block" title="seat unoccupied"></button></div>
+      <div class="grid-item"></div>
+      <div class="grid-item"></div>
+      <div class="grid-item"><button id="NRR2C1" type="button" class="block" title="seat unoccupied"></button></div>
+      <div class="grid-item"><button id="NRR2C2" type="button" class="block" title="seat unoccupied"></button></div>
+      <div class="grid-item"></div>
+      <div class="grid-item"></div>
+      <div class="grid-item"><button id="NRR3C1" type="button" class="block" title="seat unoccupied"></button></div>
+      <div class="grid-item"><button id="NRR3C2" type="button" class="block" title="seat unoccupied"></button></div>
+      <div class="grid-item"><button id="NRR3C3" type="button" class="block" title="seat unoccupied"></button></div>
+      <div class="grid-item"></div>
+      <div class="grid-item"><button id="NRR4C1" type="button" class="block" title="seat unoccupied"></button></div>
+      <div class="grid-item"><button id="NRR4C2" type="button" class="block" title="seat unoccupied"></button></div>
+      <div class="grid-item"><button id="NRR4C3" type="button" class="block" title="seat unoccupied"></button></div>
+      <div class="grid-item"></div>
+      <div class="grid-item"><button id="NRR5C1" type="button" class="block" title="seat unoccupied"></button></div>
+      <div class="grid-item"><button id="NRR5C2" type="button" class="block" title="seat unoccupied"></button></div>
+      <div class="grid-item"><button id="NRR5C3" type="button" class="block" title="seat unoccupied"></button></div>
+      <div class="grid-item"><button id="NRR5C4" type="button" class="block" title="seat unoccupied"></button></div>
+
+      <div class="grid-item"><button id="NRR6C1" type="button" class="block" title="seat unoccupied"></button></div>
+      <div class="grid-item"><button id="NRR6C2" type="button" class="block" title="seat unoccupied"></button></div>
+      <div class="grid-item"><button id="NRR6C3" type="button" class="block" title="seat unoccupied"></button></div>
+      <div class="grid-item"><button id="NRR6C4" type="button" class="block" title="seat unoccupied"></button></div>
+
+      <div class="grid-item"><button id="NRR7C1" type="button" class="block" title="seat unoccupied"></button></div>
+      <div class="grid-item"><button id="NRR7C2" type="button" class="block" title="seat unoccupied"></button></div>
+      <div class="grid-item"><button id="NRR7C3" type="button" class="block" title="seat unoccupied"></button></div>
+      <div class="grid-item"><button id="NRR7C4" type="button" class="block" title="seat unoccupied"></button></div>
+
+      <div class="grid-item"><button id="NRR8C1" type="button" class="block" title="seat unoccupied"></button></div>
+      <div class="grid-item"><button id="NRR8C2" type="button" class="block" title="seat unoccupied"></button></div>
+      <div class="grid-item"><button id="NRR8C3" type="button" class="block" title="seat unoccupied"></button></div>
+      <div class="grid-item"><button id="NRR8C4" type="button" class="block" title="seat unoccupied"></button></div>
+
+      <div class="grid-item"><button id="NRR9C1" type="button" class="block" title="seat unoccupied"></button></div>
+      <div class="grid-item"><button id="NRR9C2" type="button" class="block" title="seat unoccupied"></button></div>
+      <div class="grid-item"><button id="NRR9C3" type="button" class="block" title="seat unoccupied"></button></div>
+      <div class="grid-item"><button id="NRR9C4" type="button" class="block" title="seat unoccupied"></button></div>
+
+      <div class="grid-item"><button id="NRR10C1" type="button" class="block" title="seat unoccupied"></button></div>
+      <div class="grid-item"><button id="NRR10C2" type="button" class="block" title="seat unoccupied"></button></div>
+      <div class="grid-item"><button id="NRR10C3" type="button" class="block" title="seat unoccupied"></button></div>
+      <div class="grid-item"><button id="NRR10C4" type="button" class="block" title="seat unoccupied"></button></div>
+
+      <div class="grid-item"><button id="NRR11C1" type="button" class="block" title="seat unoccupied"></button></div>
+      <div class="grid-item"><button id="NRR11C2" type="button" class="block" title="seat unoccupied"></button></div>
+      <div class="grid-item"><button id="NRR11C3" type="button" class="block" title="seat unoccupied"></button></div>
+      <div class="grid-item"><button id="NRR11C4" type="button" class="block" title="seat unoccupied"></button></div>
+
+      <div class="grid-item"><button id="NRR12C1" type="button" class="block" title="seat unoccupied"></button></div>
+      <div class="grid-item"><button id="NRR12C2" type="button" class="block" title="seat unoccupied"></button></div>
+      <div class="grid-item"><button id="NRR12C3" type="button" class="block" title="seat unoccupied"></button></div>
+
+      <div class="grid-item"></div>
+      <div class="grid-item"><button id="NRR13C1" type="button" class="block" title="seat unoccupied"></button></div>
+      <div class="grid-item"><button id="NRR13C2" type="button" class="block" title="seat unoccupied"></button></div>
+      <div class="grid-item"><button id="NRR13C3" type="button" class="block" title="seat unoccupied"></button></div>
+      <div class="grid-item"></div>
+    </div>
+    <br>
+    <button onclick="calculate_cost()">Confirm</button>
+  </div>
+
+  <script>
+    function saveXMLData() {
+      const xmlData = '<data>hello</data>'; // XML data to be sent
+
+      fetch('http://localhost:3000/save', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ xmlData }),
+      })
+        .then(response => response.text())
+        .then(data => {
+          console.log(data); // Server response message
+        })
+        .catch(error => {
+          console.error('Error:', error);
+        });
+    }
+    var blocks = document.getElementsByClassName("block");
+
+    for (var b = 0; b < blocks.length; b++) {
+      blocks[b].addEventListener("click", createClickListener(blocks[b]));
+      blocks[b].title = blocks[b].id
+    }
+
+
+    function createClickListener(block) {
+      var availability = true;
+      return function () {
+        for (var i = 0; i < bookedSeats.length; i++) {
+          if (bookedSeats[i].id === block.id) {
+            availability = false;
+            alert("This seat is already booked by other people.");
+          }
+        }
+
+        for (var i = 0; i < bookingSeats.length; i++) {
+          if (bookingSeats[i].id === block.id) {
+            availability = false;
+            alert("You already booked this seat.");
+          }
+        }
+
+        if (availability) {
+          bookingSeats.push(new Seats(block.id, true));
+          block.style.backgroundColor = "#2196F3";
+          block.title = block.id + ' Current Booking';
+        }
+      };
+    }
+
+
+    function Seats(id, bookCondition) {
+      this.id = id;
+      this.bookCondition = bookCondition;
+    }
+
+    var bookedSeats = [];//retrieved booked seats
+    var bookingSeats = [];//current user booking
+    function httpRequest() {
+
+
+      var xmlhttp = new XMLHttpRequest();
+      xmlhttp.open("GET", "/xml/Boat.xml", false);
+      xmlhttp.send();
+      xmlDoc = xmlhttp.responseXML;
+      // var Boat = xmlDoc.getElementsByTagName("Boat");  root node
+
+      var id = "";
+      var bookCondition = false;
+
+      var TereLeft = xmlDoc.getElementsByTagName("Tere")[0].getElementsByTagName("left")[0];
+      var TLrows = TereLeft.getElementsByTagName("row");
+      for (r = 0; r < TLrows.length; r++) {
+        var columns = TLrows[r].getElementsByTagName("column");
+        for (c = 0; c < columns.length; c++) {
+          var id = columns[c].getAttribute("id");
+          var bookCondition = columns[c].textContent;
+          if (bookCondition == "true") {
+            bookedSeats.push(new Seats(id, bookCondition));
+          }
+        }
+      }
+
+      var TereRight = xmlDoc.getElementsByTagName("Tere")[0].getElementsByTagName("right")[0];
+      var TRrows = TereRight.getElementsByTagName("row");
+      for (r = 0; r < TRrows.length; r++) {
+        var columns = TRrows[r].getElementsByTagName("column");
+        for (c = 0; c < columns.length; c++) {
+          var id = columns[c].getAttribute("id");
+          var bookCondition = columns[c].textContent;
+          if (bookCondition == "true") {
+            bookedSeats.push(new Seats(id, bookCondition));
+          }
+        }
+      }
+
+      var NuiLeft = xmlDoc.getElementsByTagName("Nui")[0].getElementsByTagName("left")[0];
+      var NLrows = NuiLeft.getElementsByTagName("row");
+      for (r = 0; r < NLrows.length; r++) {
+        var columns = NLrows[r].getElementsByTagName("column");
+        for (c = 0; c < columns.length; c++) {
+          var id = columns[c].getAttribute("id");
+          var bookCondition = columns[c].textContent;
+          if (bookCondition == "true") {
+            bookedSeats.push(new Seats(id, bookCondition));
+          }
+        }
+      }
+
+      var NuiRight = xmlDoc.getElementsByTagName("Nui")[0].getElementsByTagName("right")[0];
+      var NRrows = NuiRight.getElementsByTagName("row");
+      for (r = 0; r < NRrows.length; r++) {
+        var columns = NRrows[r].getElementsByTagName("column");
+        for (c = 0; c < columns.length; c++) {
+          var id = columns[c].getAttribute("id");
+          var bookCondition = columns[c].textContent;
+          if (bookCondition == "true") {
+            bookedSeats.push(new Seats(id, bookCondition));
+          }
+        }
+      }
+
+      console.log(bookedSeats.length);// booked seats log
+      for (update = 0; update < bookedSeats.length; update++) {
+        var block = document.getElementById(bookedSeats[update].id);
+        block.style.backgroundColor = "#D83F31";
+        block.title = block.id + ' Registered book';
+      }
+    }
+
+    function writeChange() {
+  var xmlhttp = new XMLHttpRequest();
+  xmlhttp.open("PUT", "http://localhost:3000/save", true); // Use the correct URL
+
+  // Set the Content-Type header
+  xmlhttp.setRequestHeader("Content-Type", "application/json");
+
+  // Create XML data
+  var xmlData = '<data>new xml string</data>';
+
+  // Send the PUT request with XML data as JSON
+  xmlhttp.send(JSON.stringify({ xmlData: xmlData }));
+
+  xmlhttp.onreadystatechange = function () {
+    if (xmlhttp.readyState == 4) {
+      if (xmlhttp.status == 200) {
+        alert("PUT request successful");
+      } else {
+        alert("PUT request failed with status: " + xmlhttp.status);
+      }
+    }
+  };
+}
+
+
+
+
+
+
+    function calculate_cost() {
+      var result = '';
+      var ncheckbox = '';
+      var qinput = '';
+      var total = 0;
+      if (bookingSeats.length == 0) {
+        return alert("You must book seat first");
+      }
+     
+      var bookingSeatsList = '';
+      for (b = 0; b < bookingSeats.length; b++) {
+        bookingSeatsList += bookingSeats[b].id + ',';
+        if (bookingSeats[b].id.includes('TLR1') ||
+          bookingSeats[b].id.includes('TRR1') ||
+          bookingSeats[b].id.includes('NLR1') ||
+          bookingSeats[b].id.includes('NRR1')
+          ||
+          bookingSeats[b].id.includes('TLR2') ||
+          bookingSeats[b].id.includes('TRR2') ||
+          bookingSeats[b].id.includes('NLR2') ||
+          bookingSeats[b].id.includes('NRR2')) {
+          total += 30;
+        }
+        else if (bookingSeats[b].id.includes('TLR3') ||
+          bookingSeats[b].id.includes('TRR3') ||
+          bookingSeats[b].id.includes('NLR3') ||
+          bookingSeats[b].id.includes('NRR3')
+          ||
+          bookingSeats[b].id.includes('TLR4') ||
+          bookingSeats[b].id.includes('TRR4') ||
+          bookingSeats[b].id.includes('NLR4') ||
+          bookingSeats[b].id.includes('NRR4')
+          ||
+          bookingSeats[b].id.includes('TLR5') ||
+          bookingSeats[b].id.includes('TRR5') ||
+          bookingSeats[b].id.includes('NLR5') ||
+          bookingSeats[b].id.includes('NRR5')
+        ) {
+          total += 25;
+        }
+        else {
+          total += 20;
+        }
+      }
+      const params = new URLSearchParams(window.location.search);
+      const GuestNum = params.get('GuestNum');
+      const date = params.get('date');
+      const UTCTime = params.get('time');
+      window.location.href='/OrderItem.html?GuestNum='+GuestNum+'&date=' + date + '&time=' + UTCTime + '&bookingSeatsList=' + bookingSeatsList + '&total=' + total;
+    }
+
+ 
+  </script>
+</body>
+
+</html>

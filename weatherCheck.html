@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+
+<head>
+    <script>
+        var button = document.querySelector('.button');
+        var date = document.querySelector('.date');
+        var time = document.querySelector('.time');
+        var button;
+        var dateInput;
+        var timeSelect;
+
+        function onload() {
+            button = document.querySelector('button');
+            dateInput = document.querySelector('input[type="date"]');
+            timeSelect = document.getElementById('time');
+
+            // Get current local date as a Date object
+            var today = new Date();
+
+            // Set the minimum date for the input to today
+            var minDate = today.toISOString().split('T')[0];
+            dateInput.setAttribute('min', minDate);
+
+            // Set the maximum date for the input to 4 days from today
+            var maxDate = new Date(today);
+            maxDate.setDate(today.getDate() + 4);
+            var maxDateStr = maxDate.toISOString().split('T')[0];
+            dateInput.setAttribute('max', maxDateStr);
+        }
+
+        var isMatch;
+        var selectedDate;
+        var selectedTime;
+
+        function apiCheck() {
+            selectedDate = dateInput.value;
+            selectedTime = timeSelect.value;
+
+            // Construct the API request URL using selected date and time
+            var apiUrl = 'http://api.openweathermap.org/data/2.5/forecast?lat=-36.8&lon=175.10&appid=f8c9aac9b766fb3e34e138893ffecdb4';
+
+            // Make the API call
+            fetch(apiUrl)
+                .then(response => response.json())
+                .then(data => {
+                    isMatch = isWeatherMatch(selectedDate, selectedTime, data);
+                    if (isMatch) {
+                        var confirmation = confirm("Nice weather! Do you want to proceed with the booking?");
+                        if (confirmation) {
+                            const params = new URLSearchParams(window.location.search);
+                            const GuestNum = params.get("GuestNum");
+                            window.location.href = "/BookBoat.html?GuestNum=" + GuestNum + "&date=" + selectedDate + "&time=" + selectedTime;
+                        }
+                    } else {
+                        alert("Weather forecast doesn't match the selected date and time.");
+                    }
+                })
+                .catch(err => alert("Error fetching weather data"));
+        }
+
+        function isWeatherMatch(selectedDate, selectedTime, weatherData) {
+
+            for (var i = 0; i < weatherData.list.length; i++) {
+                var data = weatherData.list[i];
+                var dtTxt = data.dt_txt;
+
+                console.log("Selected Date: " + selectedDate);
+                console.log("Selected Time: " + selectedTime);
+                console.log("Weather Date/Time: " + dtTxt);
+
+                if (dtTxt.includes(selectedDate) && dtTxt.includes(selectedTime)) {
+                    var temperature = data.main.temp;
+                    var weatherDescription = data.weather[0].description;
+                    var humidity = data.main.humidity;
+
+
+                    console.log("Temperature: " + temperature + " K");
+                    document.getElementsByTagName("date")[0].innerText = Math.floor(temperature - 263) + " celsius";
+                    console.log("Weather Description: " + weatherDescription);
+                    document.getElementsByTagName("weatherDescription")[0].innerText = weatherDescription;
+                    console.log("Humidity: " + humidity + "%");
+                    document.getElementsByTagName("humidity")[0].innerText = humidity + "%";
+
+
+                    if (temperature > 280 && humidity < 99) {
+                        document.body.style.backgroundImage = 'url("/images/Sunny.webp")';
+                        return true; // Weather matches the criteria
+                    } else {
+                        document.body.style.backgroundImage = 'url("/images/cloudy.jpg")';
+                        alert("cloudy");
+                        return false; // Weather does not match the criteria
+                    }
+
+                }
+            }
+            //Return false if no matching weather data is found
+            return false;
+        }
+
+        function conditionCheck() {
+            if (isMatch) {
+                alert("Nice weather, booking success");
+                const params = new URLSearchParams(window.location.search);
+                const GuestNum = params.get("GuestNum");
+                window.location.href = "/html/BookBoat.html?GuestNum=" + GuestNum + "&date=" + selectedDate + "&time=" + selectedTime;
+            } else {
+                alert("Weather forecast doesn't match the selected date and time.");
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-image: url('/images/Sunny.webp');
+            background-size: cover;
+            background-position: center;
+            width: 100vw;
+            height: 100vh;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
+</head>
+
+<body onload="onload()">
+    <h1>Date Weather check</h1>
+    <div> <input type="date" onchange="apiCheck()">
+        <select id="time" onchange="apiCheck()">
+            <option value="09:00">10AM</option>
+            <option value="15:00">2PM</option>
+        </select>
+    </div>
+    <div><label>Date:</label>
+        <date></date>
+    </div>
+    <div><label>Weather:</label>
+        <weatherDescription></weatherDescription>
+    </div>
+    <div><label>humidity:</label>
+        <humidity></humidity>
+    </div>
+    <div><button type="button" onclick="conditionCheck()">Confirm</button></div>
+</body>

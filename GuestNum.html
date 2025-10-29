@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Guest Number</title>
+    <style>
+        button{
+           background-color: rgba(0, 0, 0, 0);
+            /* Set background color to transparent */
+            border: none;
+            /* Remove border */
+            color: white;
+            /* Set text color to white, or any color you prefer */
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+
+            background-color: rgba(0, 0, 0, 0.1);
+        } 
+        body {
+            background-image: url('/images/Relaxing.jpg');
+            background-size: cover;
+            background-position: center;
+            width: 100vw;
+            height: 100vh;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        div{
+            background-color: #186f83;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Guest Amount</h1>
+    <input id="GuestNum" type="number" min="1" />
+    <br>
+    <div><button type="button" onclick="passNum()">Confirm</button></div>
+    <script>
+        function passNum() 
+        {
+            var GuestNum =Number(document.getElementById("GuestNum").value);
+            if(GuestNum>0)
+            {
+                window.location.href="/weatherCheck.html?GuestNum="+GuestNum;
+            }
+            
+        }
+    </script>
+</body>
